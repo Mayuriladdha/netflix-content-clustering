@@ -1,66 +1,80 @@
-# Amazon Prime Movies & TV Shows – Exploratory Data Analysis (EDA)
-
-## Project Overview
-An Exploratory Data Analysis project focused on understanding the Amazon Prime Video content catalogue. The analysis aims to identify content distribution patterns, popular categories, genre trends, and other insights that help understand the platform's content library.
+# Netflix Movies & TV Shows Clustering – Unsupervised Machine Learning
 
 ## Problem Statement
-What does the Amazon Prime Video catalogue look like in terms of content distribution, genres, release trends, and other available attributes?
+Can Netflix movies and TV shows be grouped into meaningful clusters based on their content characteristics, such as genre, description, cast, country, and content rating?
 
-This analysis explores the catalogue to identify patterns, understand content preferences, and uncover insights that can support content-related business decisions.
+This project aims to apply unsupervised machine learning techniques to identify similarities between Netflix titles, discover content patterns, and explore how clustering can support content categorization and recommendation systems.
 
 ## Dataset
-- **Source:** Kaggle / Course Dataset
-- **Total Records:** 124,236 rows
-- **Total Features:** 4 columns
-- **Platform:** Amazon Prime Video
+- **Source:** Kaggle – Netflix Movies and TV Shows Dataset
+- **Dataset Size:** 7,787 rows × 12 columns
 - **Format:** CSV
+- **Features:** show_id, type, title, director, cast, country, date_added, release_year, rating, duration, listed_in, description.
+- **Clustering Features:** type, listed_in, description, country, rating, and cast.
 
 ## Approach
 
-### 1. Data Cleaning
-- Checked for missing and null values.
-- Identified and handled duplicate records.
-- Examined data types and corrected inconsistencies where required.
-- Standardized categorical values.
-- Prepared the dataset for exploratory analysis.
+### 1. Data Cleaning and Preprocessing
+- Checked for missing and null values across all columns.
+- Identified missing values in director, cast, country, date_added, and rating.
+- Checked for duplicate records (no duplicate rows found).
+- Handled missing categorical and text values.
+- Prepared relevant features for machine learning.
+- Standardized and transformed data where required.
 
-### 2. Exploratory Data Analysis (EDA)
-- Examined the distribution of available content categories.
-- Identified frequently occurring categories and attributes.
-- Analyzed patterns and trends in the available data.
-- Investigated relationships between relevant variables.
+### 2. Text Processing and Feature Engineering
+- Combined relevant content attributes to create meaningful text features.
+- Applied text preprocessing techniques.
+- Removed common stopwords where applicable.
+- Used TF-IDF (Term Frequency–Inverse Document Frequency) to convert textual information into numerical features.
+- Prepared feature vectors for clustering.
 
-### 3. Data Visualization
-- Count plots for categorical distributions.
-- Bar charts for category comparisons.
-- Distribution plots for numerical variables.
-- Correlation heatmap, where applicable.
+### 3. Dimensionality Reduction
+- Applied dimensionality reduction techniques, such as PCA, where appropriate.
+- Reduced feature complexity to support visualization and cluster interpretation.
 
-## Key Insights
-*To be populated after calculating actual results from the dataset.*
+### 4. Clustering
+- Applied an unsupervised clustering algorithm to group similar Netflix titles.
+- Explored similarities based on genre, description, and other content attributes.
+- Analyzed the resulting clusters to identify common themes and content patterns.
 
-- Distribution of content across available categories.
-- Most frequently occurring content category.
-- Important patterns in the available attributes.
-- Notable trends and observations from the analysis.
+### 5. Optimal Cluster Selection
+- Used the Elbow Method to evaluate different cluster counts.
+- Used the Silhouette Score, if calculated, to assess cluster separation and cohesion.
+- Selected the cluster configuration based on model evaluation results.
+
+## Results and Findings
+
+- Explored similarities among Netflix movies and TV shows using content-based features.
+- Grouped titles into clusters based on their content characteristics.
+- Identified common genres and themes within the resulting clusters.
+- Investigated how unsupervised learning can organize large entertainment catalogues.
+- Evaluated clustering performance using appropriate validation metrics.
 
 ## Tech Stack
 - Python
 - Pandas
 - NumPy
+- Scikit-learn
 - Matplotlib
 - Seaborn
 - Jupyter Notebook / Google Colab
 
 ## Project Objectives
-- Develop practical data-cleaning skills.
-- Perform exploratory data analysis on a real-world dataset.
-- Identify meaningful patterns using statistical analysis.
-- Communicate findings through effective visualizations.
+- Understand the application of unsupervised machine learning.
+- Perform text preprocessing and feature engineering.
+- Apply TF-IDF for text-based feature extraction.
+- Explore clustering algorithms for content grouping.
+- Evaluate clustering performance and interpret results.
+- Understand how clustering can support content discovery and recommendation systems.
 
 ## Conclusion
-This project demonstrates the application of Python-based data analysis techniques to explore a large entertainment catalogue. Through data cleaning, exploratory analysis, and visualization, the project aims to uncover meaningful patterns and generate insights from the available data.
+This project explores the application of unsupervised machine learning to the Netflix content catalogue. By processing textual and categorical features and applying clustering techniques, the analysis aims to identify similarities between movies and TV shows.
+
+The project demonstrates practical skills in data preprocessing, feature engineering, text vectorization, dimensionality reduction, and unsupervised machine learning.
 
 
+## Author
+**Mayuri Laddha** · [LinkedIn](https://www.linkedin.com/in/mayuri-laddha-135938404) · [GitHub](https://github.com/Mayuriladdha)
 ## Author
 **Mayuri Laddha** · [LinkedIn](https://www.linkedin.com/in/mayuri-laddha-135938404) · [GitHub](https://github.com/Mayuriladdha)
