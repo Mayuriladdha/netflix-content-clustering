@@ -76,5 +76,3 @@ The project demonstrates practical skills in data preprocessing, feature enginee
 
 ## Author
 **Mayuri Laddha** · [LinkedIn](https://www.linkedin.com/in/mayuri-laddha-135938404) · [GitHub](https://github.com/Mayuriladdha)
-## Author
-**Mayuri Laddha** · [LinkedIn](https://www.linkedin.com/in/mayuri-laddha-135938404) · [GitHub](https://github.com/Mayuriladdha)
